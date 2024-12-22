@@ -60,13 +60,13 @@ class VirtualAssistant:
             print(f"\rUser said: {query}\n")
             return query.lower()
         except sr.RequestError:
-            print("Could not request results; check your internet connection")
+            # print("Could not request results; check googler internet connection")
             return "None"
         except sr.UnknownValueError:
-            print("Could not understand audio")
+            # print("Could not understand audio")
             return "None"
         except Exception as e:
-            print(f"Error in speech recognition: {e}")
+            # print(f"Error in speech recognition: {e}")
             return "None"
 
     def get_day_and_time(self):
